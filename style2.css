@@ -1,0 +1,85 @@
+/* Polices modernes et épurées */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Fond clair et neutre */
+  }
+  
+  .panel {
+    background-color: #fff; /* Fond blanc pour le contraste */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre subtile */
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd; /* Bordure discrète */
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  /* Style de la liste déroulante */
+  .dropdown {
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 10; /* Assurer l'affichage au-dessus des autres éléments */
+  }
+  
+  .dropdown ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .dropdown li {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .dropdown li:hover {
+    background-color: #f0f0f0; /* Survol léger */
+  }
+  
+  /* Style de la carte */
+  #map {
+    height: 400px;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 8px;
+  }
+  
+  /* Mise en page générale */
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  @media (min-width: 768px) {
+    section {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  
+    .panel {
+      width: 40%;
+    }
+  
+    #map {
+      width: 50%;
+    }
+  }

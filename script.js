@@ -18,6 +18,8 @@ const displaySelection = (response) => {
         const ul = document.createElement('ul');
         select.appendChild(ul);
 
+        console.log(response.features)
+
         response.features.forEach((element) => {
             const li = document.createElement('li');
             const ligneAdresse = document.createElement('span');
@@ -61,7 +63,7 @@ const selectAdresse = (element) => {
     updateMap(element.geometry.coordinates);
 };
 
-const setQuery = (value) => `${requestURL}${value}&type=housenumber`;
+const setQuery = (value) => `${requestURL}${value}&type=housenumber&limit=10`;
 
 // Initialisation de la carte
 const initializeMap = () => {
