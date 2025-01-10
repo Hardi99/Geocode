@@ -17,7 +17,7 @@ window.onload = () => {
 };
 
 const displaySelection = (features) => {
-  select.innerHTML = ''; 
+  select.innerText = ''; 
   if (features.length === 0) {
     select.style.display = "none";
     return;
@@ -26,7 +26,7 @@ const displaySelection = (features) => {
   const ul = document.createElement('ul');
   features.forEach(feature => {
     const li = document.createElement('li');
-    li.innerHTML = `<span>${feature.properties.name}</span> ${feature.properties.postcode} ${feature.properties.city}`;
+    li.innerText = `${feature.properties.label}`;
     li.onclick = () => selectAdresse(feature);
     ul.appendChild(li);
   });
@@ -60,7 +60,7 @@ const selectAdresse = (feature) => {
   updateMap(feature.geometry.coordinates);
 };
 
-const setQuery = (value) => `${requestURL}${value}&type=housenumber&limit=10`;
+const setQuery = (value) => `${requestURL}${value}&type=housenumber`;
 
 const initializeMap = () => {
   mapboxgl.accessToken = mapboxToken;
